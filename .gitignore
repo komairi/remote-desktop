@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+android-viewer/.gradle/
+android-viewer/build/
+android-viewer/app/build/
+android-viewer/local.properties
+android-viewer/.idea/
+*.iml
+.idea/
+.DS_Store
