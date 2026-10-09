@@ -24,11 +24,11 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
-          gradle-version: '8.5'
+          gradle-version: '8.7'
 
       - name: Build Debug APK
         working-directory: android-viewer
-        run: gradle assembleDebug --no-daemon --stacktrace
+       run: ./gradlew assembleDebug --no-daemon --stacktrace
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
