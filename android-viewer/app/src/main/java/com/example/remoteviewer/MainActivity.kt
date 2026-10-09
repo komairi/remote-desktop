@@ -17,6 +17,7 @@ import okhttp3.WebSocket
 import okhttp3.WebSocketListener
 import org.json.JSONObject
 import java.util.concurrent.TimeUnit
+import okio.ByteString
 
 class MainActivity : AppCompatActivity() {
 
@@ -71,7 +72,7 @@ class MainActivity : AppCompatActivity() {
                     connectBtn.text = "Disconnect"
                 }
             }
-            override fun onMessage(ws: WebSocket, bytes: ByteArray) {
+           override fun onMessage(webSocket: WebSocket, bytes: ByteString) {
                 val bmp = BitmapFactory.decodeByteArray(bytes, 0, bytes.size)
                 if (bmp != null) {
                     runOnUiThread {
