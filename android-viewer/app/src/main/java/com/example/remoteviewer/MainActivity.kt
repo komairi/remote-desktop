@@ -73,7 +73,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
            override fun onMessage(webSocket: WebSocket, bytes: ByteString) {
-                val bmp = BitmapFactory.decodeByteArray(bytes, 0, bytes.size)
+                val bmp = BitmapFactory.decodeByteArray(bytes.toByteArray(), 0, bytes.size)
                 if (bmp != null) {
                     runOnUiThread {
                         screenView.setImageBitmap(bmp)
