@@ -25,7 +25,9 @@ jobs:
 
       - name: Build Debug APK
         working-directory: android-viewer
-        run: ./gradlew assembleDebug --no-daemon --stacktrace
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleDebug --no-daemon --stacktrace
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
